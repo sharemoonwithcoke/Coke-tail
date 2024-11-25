@@ -1,0 +1,192 @@
+
+:root {
+  --accent-color: #2e8b57; 
+  --dark-color: #333; 
+  --light-bg: #f9f9f9; 
+  --text-color: #333; 
+  --image-border-radius: 15px; 
+}
+
+.about-page h1 {
+  color: var(--dark-color); 
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.about-page h2 {
+  color: var(--accent-color); 
+  margin-bottom: 10px;
+  font-size: 1.75rem;
+}
+
+.about-page p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+
+.skip-link {
+position: absolute;
+top: -40px;
+left: 0;
+background: #fff; 
+color: #000; 
+padding: 8px 16px; 
+z-index: 100; 
+transition: top 0.3s; 
+}
+
+
+.skip-link:focus {
+top: 10px; 
+}
+
+.img-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--accent-color);
+  color: #fff; 
+  padding: 10px;
+  border-radius: var(--image-border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.display-image {
+  width: 200px;
+  height: 300px;
+  border-radius: var(--image-border-radius);
+  border: 4px solid var(--light-bg); 
+}
+
+.display-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+button:hover {
+  background-color: var(--dark-color);
+}
+.team-section{
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+}
+
+.reviews-section {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+
+.team-section, .reviews-section {
+  margin-top: 20px;
+
+}
+
+.hospital-intro,.team-section, .reviews-section h1, h2 {
+  color: var(--dark-color); 
+}
+
+.team-section, .reviews-section h1, h2 {
+  color: var(--dark-color); 
+}
+
+
+
+.reviews-section {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.review {
+  background-color: #ffffff; 
+  border: 2px solid #008000; 
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  transition: transform 0.3s ease;
+}
+
+.review:hover {
+  transform: translateY(-5px); 
+}
+
+
+.review-quote {
+  font-family: 'Comic Sans MS', 'Arial', sans-serif; 
+  font-size: 16px;
+  color: #333; 
+  position: relative;
+  padding-left: 30px; 
+}
+
+.review-quote:before {
+  content: "“"; 
+  font-size: 30px;
+  color: #008000; 
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.review-quote:after {
+  content: "”"; 
+  font-size: 30px;
+  color: #008000; 
+  position: absolute;
+  right: -20px; 
+  top: -5px;
+}
+
+.review-author {
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  font-size: 14px;
+  color: #666; 
+  text-align: right;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+  .img-display {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .display-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important; 
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .skip-link {
+    transition: none;
+  }
+  
+  .img-display,
+  .review {
+    transition: none;
+  }
+  
+  .review:hover {
+    transform: none;
+  }
+}
